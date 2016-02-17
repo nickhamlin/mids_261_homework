@@ -6,3 +6,5 @@
 *.txt
 *.data
 mrjob.conf
+*part-*
+*_SUCCESS
