@@ -4,6 +4,7 @@
 *.py
 *.pyc
 *.txt
+*.csv
 *.data
 mrjob.conf
 *part-*
