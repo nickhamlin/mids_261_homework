@@ -1,0 +1,11 @@
+# IPython Notebook
+.ipynb_checkpoints
+
+*.py
+*.pyc
+*.txt
+*.csv
+*.data
+mrjob.conf
+*part-*
+*_SUCCESS
