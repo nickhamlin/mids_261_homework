@@ -1,0 +1,71 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n#DATASCI W261: Machine Learning at Scale\n\n**Nick Hamlin** (nickhamlin@gmail.com)  \n**Tigi Thomas** (tgthomas@berkeley.edu)  \n**Rock Baek** (rockb1017@gmail.com)  \n**Hussein Danish** (husseindanish@gmail.com)\n  \n   \nTime of Submission: 11:15 PM EST, Monday, March 28, 2016  \nW261-3, Spring 2016  \nWeek 11 Homework\n\n###Submission Notes:\n- For each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \"Useful Reference\" below.\n",
+      "dateUpdated": "Apr 2, 2016 1:19:18 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459617356686_-839889377",
+      "id": "20160402-131556_1518482001",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eDATASCI W261: Machine Learning at Scale\u003c/h1\u003e\n\u003cp\u003e\u003cstrong\u003eNick Hamlin\u003c/strong\u003e (nickhamlin@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eTigi Thomas\u003c/strong\u003e (tgthomas@berkeley.edu)\n\u003cbr  /\u003e\u003cstrong\u003eRock Baek\u003c/strong\u003e (rockb1017@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eHussein Danish\u003c/strong\u003e (husseindanish@gmail.com)\u003c/p\u003e\n\u003cp\u003eTime of Submission: 11:15 PM EST, Monday, March 28, 2016\n\u003cbr  /\u003eW261-3, Spring 2016\n\u003cbr  /\u003eWeek 11 Homework\u003c/p\u003e\n\u003ch3\u003eSubmission Notes:\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eFor each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \u0026ldquo;Useful Reference\u0026rdquo; below.\u003c/li\u003e\n\u003c/ul\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 1:15:56 PM",
+      "dateStarted": "Apr 2, 2016 1:19:18 PM",
+      "dateFinished": "Apr 2, 2016 1:19:18 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459617500333_-1548365344",
+      "id": "20160402-131820_794513204",
+      "dateCreated": "Apr 2, 2016 1:18:20 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "MIDS-W261-2015-HWK-Week11-Hamlin-Thomas-Baek-Danish",
+  "id": "2BFM2HPPB",
+  "angularObjects": {
+    "2BEAWJ1TT": [],
+    "2BFT66SZ4": [],
+    "2BEFBJW9Y": [],
+    "2BJ5KPJC9": [],
+    "2BFDRUNCA": [],
+    "2BGBUVZEB": [],
+    "2BESEVNEG": [],
+    "2BECR257J": [],
+    "2BFPQHJEU": [],
+    "2BJ1DK6NW": [],
+    "2BER46X5F": [],
+    "2BFM99WV1": [],
+    "2BFGDF6JD": [],
+    "2BFZGZMAD": []
+  },
+  "config": {},
+  "info": {}
+}
