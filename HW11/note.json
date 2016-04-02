@@ -1,8 +1,8 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n#DATASCI W261: Machine Learning at Scale\n\n**Nick Hamlin** (nickhamlin@gmail.com)  \n**Tigi Thomas** (tgthomas@berkeley.edu)  \n**Rock Baek** (rockb1017@gmail.com)  \n**Hussein Danish** (husseindanish@gmail.com)\n  \n   \nTime of Submission: 11:15 PM EST, Monday, March 28, 2016  \nW261-3, Spring 2016  \nWeek 11 Homework\n\n###Submission Notes:\n- For each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \"Useful Reference\" below.\n",
-      "dateUpdated": "Apr 2, 2016 1:19:18 PM",
+      "text": "%md\n\n#DATASCI W261: Machine Learning at Scale\n\n**Nick Hamlin** (nickhamlin@gmail.com)  \n**Tigi Thomas** (tgthomas@berkeley.edu)  \n**Rock Baek** (rockb1017@gmail.com)  \n**Hussein Danish** (husseindanish@gmail.com)\n  \n   \nTime of Submission: 11:15 PM EST, Monday, March 28, 2016  \nW261-3, Spring 2016  \nWeek 11 Homework\n\n###Submission Notes:\n- For each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \"Useful Reference\" below.\n\n### Useful Links\n- [Original Assignment](https://www.dropbox.com/s/rkxw455jj8ntqxy/MIDS-MLS-HW-11.txt?dl\u003d0)\n",
+      "dateUpdated": "Apr 2, 2016 2:40:55 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -27,17 +27,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch1\u003eDATASCI W261: Machine Learning at Scale\u003c/h1\u003e\n\u003cp\u003e\u003cstrong\u003eNick Hamlin\u003c/strong\u003e (nickhamlin@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eTigi Thomas\u003c/strong\u003e (tgthomas@berkeley.edu)\n\u003cbr  /\u003e\u003cstrong\u003eRock Baek\u003c/strong\u003e (rockb1017@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eHussein Danish\u003c/strong\u003e (husseindanish@gmail.com)\u003c/p\u003e\n\u003cp\u003eTime of Submission: 11:15 PM EST, Monday, March 28, 2016\n\u003cbr  /\u003eW261-3, Spring 2016\n\u003cbr  /\u003eWeek 11 Homework\u003c/p\u003e\n\u003ch3\u003eSubmission Notes:\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eFor each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \u0026ldquo;Useful Reference\u0026rdquo; below.\u003c/li\u003e\n\u003c/ul\u003e\n"
+        "msg": "\u003ch1\u003eDATASCI W261: Machine Learning at Scale\u003c/h1\u003e\n\u003cp\u003e\u003cstrong\u003eNick Hamlin\u003c/strong\u003e (nickhamlin@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eTigi Thomas\u003c/strong\u003e (tgthomas@berkeley.edu)\n\u003cbr  /\u003e\u003cstrong\u003eRock Baek\u003c/strong\u003e (rockb1017@gmail.com)\n\u003cbr  /\u003e\u003cstrong\u003eHussein Danish\u003c/strong\u003e (husseindanish@gmail.com)\u003c/p\u003e\n\u003cp\u003eTime of Submission: 11:15 PM EST, Monday, March 28, 2016\n\u003cbr  /\u003eW261-3, Spring 2016\n\u003cbr  /\u003eWeek 11 Homework\u003c/p\u003e\n\u003ch3\u003eSubmission Notes:\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eFor each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \u0026ldquo;Useful Reference\u0026rdquo; below.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eUseful Links\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href\u003d\"https://www.dropbox.com/s/rkxw455jj8ntqxy/MIDS-MLS-HW-11.txt?dl\u003d0\"\u003eOriginal Assignment\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n"
       },
       "dateCreated": "Apr 2, 2016 1:15:56 PM",
-      "dateStarted": "Apr 2, 2016 1:19:18 PM",
-      "dateFinished": "Apr 2, 2016 1:19:18 PM",
+      "dateStarted": "Apr 2, 2016 2:40:55 PM",
+      "dateFinished": "Apr 2, 2016 2:40:55 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## HW 11.0\n\n### HW 11.0 - Problem Statement\n\n*What is Apache Spark and how is it different to Apache Hadoop?*",
-      "dateUpdated": "Apr 2, 2016 1:41:16 PM",
+      "text": "%md\n## HW 11.0 - Broadcast versus Caching in Spark\n\n*What is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.*     \n\u003cbr\u003e\n*Review [this Spark-notebook-based implementation of KMeans](http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb) and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:*\n\u003cbr\u003e",
+      "dateUpdated": "Apr 2, 2016 2:48:00 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -61,11 +61,147 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch2\u003eHW 11.0\u003c/h2\u003e\n\u003ch3\u003eHW 11.0 - Problem Statement\u003c/h3\u003e\n\u003cp\u003e\u003cem\u003eWhat is Apache Spark and how is it different to Apache Hadoop?\u003c/em\u003e\u003c/p\u003e\n"
+        "msg": "\u003ch2\u003eHW 11.0 - Broadcast versus Caching in Spark\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eWhat is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\n\u003cbr  /\u003e\u003cem\u003eReview \u003ca href\u003d\"http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb\"\u003ethis Spark-notebook-based implementation of KMeans\u003c/a\u003e and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n"
       },
       "dateCreated": "Apr 2, 2016 1:18:20 PM",
-      "dateStarted": "Apr 2, 2016 1:41:16 PM",
-      "dateFinished": "Apr 2, 2016 1:41:16 PM",
+      "dateStarted": "Apr 2, 2016 2:48:00 PM",
+      "dateFinished": "Apr 2, 2016 2:48:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## HW 11.1 - Loss Functions\n\n*In the context of binary classification problems, does the linear SVM learning algorithm yield the same result as a L2 penalized logistic regesssion learning algorithm?*\n\u003cbr\u003e\n\n*In your reponse, please discuss the loss functions, and the learnt models, and separating surfaces between the two classes.*\n\u003cbr\u003e\n\n*In the context of binary classification problems, does the linear SVM learning algorithm yield the same result as a perceptron learning algorithm?*\n\u003cbr\u003e\n\n*[OPTIONAL]: generate an artifical binary classification dataset with 2 input features and plot the learnt separating surface for both a linear SVM and for  logistic regression. Comment on the learnt surfaces. Please feel free to do this in Python (no need to use Spark).*\n\u003cbr\u003e",
+      "dateUpdated": "Apr 2, 2016 2:48:41 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459618876287_1418456080",
+      "id": "20160402-134116_1939250134",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW 11.1 - Loss Functions\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eIn the context of binary classification problems, does the linear SVM learning algorithm yield the same result as a L2 penalized logistic regesssion learning algorithm?\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eIn your reponse, please discuss the loss functions, and the learnt models, and separating surfaces between the two classes.\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eIn the context of binary classification problems, does the linear SVM learning algorithm yield the same result as a perceptron learning algorithm?\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003e[OPTIONAL]: generate an artifical binary classification dataset with 2 input features and plot the learnt separating surface for both a linear SVM and for  logistic regression. Comment on the learnt surfaces. Please feel free to do this in Python (no need to use Spark).\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 1:41:16 PM",
+      "dateStarted": "Apr 2, 2016 2:48:41 PM",
+      "dateFinished": "Apr 2, 2016 2:48:41 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n##HW11.2 Gradient descent\n*In the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?*\n\u003cbr\u003e\n\n*Describe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)*\n\u003cbr\u003e",
+      "dateUpdated": "Apr 2, 2016 2:49:56 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459622884550_2069185177",
+      "id": "20160402-144804_1612894350",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW11.2 Gradient descent\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eIn the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eDescribe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 2:48:04 PM",
+      "dateStarted": "Apr 2, 2016 2:49:56 PM",
+      "dateFinished": "Apr 2, 2016 2:49:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n##HW11.3  Logistic Regression\n\n### HW 11.3 Problem Statement\n\nGenerate 2 sets of linearly separable data with 100 data points each using the data generation code provided below and plot each in separate plots. Call one the training set and the other the testing set.\n\ndef generateData(n):\n \"\"\" \n  generates a 2D linearly separable dataset with n samples. \n  The third element of the sample is the label\n \"\"\"\n xb \u003d (rand(n)*2-1)/2-0.5\n yb \u003d (rand(n)*2-1)/2+0.5\n xr \u003d (rand(n)*2-1)/2+0.5\n yr \u003d (rand(n)*2-1)/2-0.5\n inputs \u003d []\n for i in range(len(xb)):\n  inputs.append([xb[i],yb[i],1])\n  inputs.append([xr[i],yr[i],-1])\n return inputs\n\nModify this data generation code to generating non-linearly separable training and testing datasets (with approximately 10% of the data falling on the wrong side of the separating hyperplane. Plot the resulting datasets. \n\nNOTE: For the remainder of this problem please use the non-linearly separable training and testing datasets.\n\nUsing MLLib  train up a LASSO logistic regression model with the training dataset and evaluate with the testing set. What a good number of iterations for training the logistic regression model? Justify with plots and words. \n\nDerive and implement in Spark a weighted  LASSO logistic regression. Implement a convergence test of your choice to check for termination within your training algorithm . \n\nWeight the above training dataset as follows:  Weight each example using the inverse vector length (Euclidean norm): \n\nweight(X)\u003d 1/||X||, \n\nwhere ||X|| \u003d SQRT(X.X)\u003d SQRT(X1^2 + X2^2)\n\nHere X is vector made up of X1 and X2.\n\nEvaluate your homegrown weighted  LASSO logistic regression on the test dataset. Report misclassification error (1 - Accuracy) and how many iterations does it took to converge.\n\nDoes Spark MLLib have a weighted LASSO logistic regression implementation. If so use it and report your findings on the weighted training set and test set. ",
+      "dateUpdated": "Apr 2, 2016 3:47:25 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459622985670_1371405559",
+      "id": "20160402-144945_1998030949",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW11.3  Logistic Regression\u003c/h2\u003e\n\u003ch3\u003eHW 11.3 Problem Statement\u003c/h3\u003e\n\u003cp\u003eGenerate 2 sets of linearly separable data with 100 data points each using the data generation code provided below and plot each in separate plots. Call one the training set and the other the testing set.\u003c/p\u003e\n\u003cp\u003edef generateData(n):\n\u003cbr  /\u003e\u0026ldquo;\u0026ldquo;\u0026rdquo;\n\u003cbr  /\u003egenerates a 2D linearly separable dataset with n samples.\n\u003cbr  /\u003eThe third element of the sample is the label\n\u003cbr  /\u003e\u0026ldquo;\u0026ldquo;\u0026rdquo;\n\u003cbr  /\u003exb \u003d (rand(n)\u003cem\u003e2-1)/2-0.5\n\u003cbr  /\u003eyb \u003d (rand(n)\u003c/em\u003e2-1)/2+0.5\n\u003cbr  /\u003exr \u003d (rand(n)\u003cem\u003e2-1)/2+0.5\n\u003cbr  /\u003eyr \u003d (rand(n)\u003c/em\u003e2-1)/2-0.5\n\u003cbr  /\u003einputs \u003d []\n\u003cbr  /\u003efor i in range(len(xb)):\n\u003cbr  /\u003einputs.append([xb[i],yb[i],1])\n\u003cbr  /\u003einputs.append([xr[i],yr[i],-1])\n\u003cbr  /\u003ereturn inputs\u003c/p\u003e\n\u003cp\u003eModify this data generation code to generating non-linearly separable training and testing datasets (with approximately 10% of the data falling on the wrong side of the separating hyperplane. Plot the resulting datasets.\u003c/p\u003e\n\u003cp\u003eNOTE: For the remainder of this problem please use the non-linearly separable training and testing datasets.\u003c/p\u003e\n\u003cp\u003eUsing MLLib  train up a LASSO logistic regression model with the training dataset and evaluate with the testing set. What a good number of iterations for training the logistic regression model? Justify with plots and words.\u003c/p\u003e\n\u003cp\u003eDerive and implement in Spark a weighted  LASSO logistic regression. Implement a convergence test of your choice to check for termination within your training algorithm .\u003c/p\u003e\n\u003cp\u003eWeight the above training dataset as follows:  Weight each example using the inverse vector length (Euclidean norm):\u003c/p\u003e\n\u003cp\u003eweight(X)\u003d 1/||X||,\u003c/p\u003e\n\u003cp\u003ewhere ||X|| \u003d SQRT(X.X)\u003d SQRT(X1\u003csup\u003e2 + X2\u003c/sup\u003e2)\u003c/p\u003e\n\u003cp\u003eHere X is vector made up of X1 and X2.\u003c/p\u003e\n\u003cp\u003eEvaluate your homegrown weighted  LASSO logistic regression on the test dataset. Report misclassification error (1 - Accuracy) and how many iterations does it took to converge.\u003c/p\u003e\n\u003cp\u003eDoes Spark MLLib have a weighted LASSO logistic regression implementation. If so use it and report your findings on the weighted training set and test set.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 2:49:45 PM",
+      "dateStarted": "Apr 2, 2016 3:47:25 PM",
+      "dateFinished": "Apr 2, 2016 3:47:25 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md \n\n##HW11.4 SVMs\n\n### HW 11.4 Problem Statement\nUse the non-linearly separable training and testing datasets from HW11.3 in this problem. Using MLLib  train up a soft SVM model with the training dataset and evaluate with the testing set. What is a good number of iterations for training the SVM model? Justify with plots and words. \n\u003cbr\u003e\nDerive and Implement in Spark a weighted soft linear svm classification learning algorithm.\nEvaluate your homegrown weighted soft linear svm classification learning algorithm on the weighted training dataset and test dataset from HW11.3. Report misclassification error (1 - Accuracy) and how many iterations does it took to converge?  How many support vectors do you end up?\n\u003cbr\u003e\nDoes Spark MLLib have a weighted soft SVM learner. If so use it and report your findings on the weighted training set and test set. ",
+      "dateUpdated": "Apr 2, 2016 3:48:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459626445886_1391328182",
+      "id": "20160402-154725_844857105",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW11.4 SVMs\u003c/h2\u003e\n\u003ch3\u003eHW 11.4 Problem Statement\u003c/h3\u003e\n\u003cp\u003eUse the non-linearly separable training and testing datasets from HW11.3 in this problem. Using MLLib  train up a soft SVM model with the training dataset and evaluate with the testing set. What is a good number of iterations for training the SVM model? Justify with plots and words.\n\u003cbr  /\u003e\u003cbr\u003e\n\u003cbr  /\u003eDerive and Implement in Spark a weighted soft linear svm classification learning algorithm.\n\u003cbr  /\u003eEvaluate your homegrown weighted soft linear svm classification learning algorithm on the weighted training dataset and test dataset from HW11.3. Report misclassification error (1 - Accuracy) and how many iterations does it took to converge?  How many support vectors do you end up?\n\u003cbr  /\u003e\u003cbr\u003e\n\u003cbr  /\u003eDoes Spark MLLib have a weighted soft SVM learner. If so use it and report your findings on the weighted training set and test set.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 3:47:25 PM",
+      "dateStarted": "Apr 2, 2016 3:48:43 PM",
+      "dateFinished": "Apr 2, 2016 3:48:43 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -75,9 +211,9 @@
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1459618876287_1418456080",
-      "id": "20160402-134116_1939250134",
-      "dateCreated": "Apr 2, 2016 1:41:16 PM",
+      "jobName": "paragraph_1459626483316_-1269564563",
+      "id": "20160402-154803_10879002",
+      "dateCreated": "Apr 2, 2016 3:48:03 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
