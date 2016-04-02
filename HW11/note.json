@@ -36,14 +36,48 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%md\n## HW 11.0\n\n### HW 11.0 - Problem Statement\n\n*What is Apache Spark and how is it different to Apache Hadoop?*",
+      "dateUpdated": "Apr 2, 2016 1:41:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1459617500333_-1548365344",
       "id": "20160402-131820_794513204",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW 11.0\u003c/h2\u003e\n\u003ch3\u003eHW 11.0 - Problem Statement\u003c/h3\u003e\n\u003cp\u003e\u003cem\u003eWhat is Apache Spark and how is it different to Apache Hadoop?\u003c/em\u003e\u003c/p\u003e\n"
+      },
       "dateCreated": "Apr 2, 2016 1:18:20 PM",
+      "dateStarted": "Apr 2, 2016 1:41:16 PM",
+      "dateFinished": "Apr 2, 2016 1:41:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459618876287_1418456080",
+      "id": "20160402-134116_1939250134",
+      "dateCreated": "Apr 2, 2016 1:41:16 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -66,6 +100,8 @@
     "2BFGDF6JD": [],
     "2BFZGZMAD": []
   },
-  "config": {},
+  "config": {
+    "looknfeel": "default"
+  },
   "info": {}
 }
