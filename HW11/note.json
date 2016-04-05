@@ -1,6 +1,18 @@
 {
   "paragraphs": [
     {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826364775_1895467447",
+      "id": "20160404-231924_1892585354",
+      "dateCreated": "Apr 4, 2016 11:19:24 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n\n#DATASCI W261: Machine Learning at Scale\n\n**Nick Hamlin** (nickhamlin@gmail.com)  \n**Tigi Thomas** (tgthomas@berkeley.edu)  \n**Rock Baek** (rockb1017@gmail.com)  \n**Hussein Danish** (husseindanish@gmail.com)\n  \n   \nTime of Submission: 11:15 PM EST, Monday, March 28, 2016  \nW261-3, Spring 2016  \nWeek 11 Homework\n\n###Submission Notes:\n- For each problem, we\u0027ve included a summary of the question as posed in the instructions.  In many cases, we have not included the full text to keep the final submission as uncluttered as possible.  For reference, we\u0027ve included a link to the original instructions in the \"Useful Reference\" below.\n\n### Useful Links\n- [Original Assignment](https://www.dropbox.com/s/rkxw455jj8ntqxy/MIDS-MLS-HW-11.txt?dl\u003d0)\n- [This notebook on Zeppelin Viewer](https://www.zeppelinhub.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL25pY2toYW1saW4vbWlkc18yNjFfaG9tZXdvcmsvbWFzdGVyL0hXMTEvbm90ZS5qc29u)\n- [Logistic Regression Notebook](http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/3e1bsvpvqbf97u1/LogisticRegression-Notebook.ipynb)\n- [SVM in Spark Notebook](http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/dm2l73iznde7y4f/SVM-Notebook-Linear-Kernel-2015-06-19.ipynb)\n",
       "dateUpdated": "Apr 3, 2016 6:51:38 PM",
       "config": {
@@ -36,8 +48,129 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## HW 11.0 - Broadcast versus Caching in Spark\n\n*What is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.*     \n\u003cbr\u003e\n*Review [this Spark-notebook-based implementation of KMeans](http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb) and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:*\n\u003cbr\u003e",
-      "dateUpdated": "Apr 2, 2016 3:53:51 PM",
+      "text": "%md\n## HW 11.0 - Broadcast versus Caching in Spark\n\n*What is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.*     \n\u003cbr\u003e\n\n**Caching** (or persisting) is a key operation in Spark. When you cache an RDD, each node stores any partitions of it that it computes in memory and reuses them in other actions on that dataset (or datasets derived from it). This allows future actions to be much faster (often by more than 10x). Caching is a key tool for iterative algorithms and fast interactive use.\n\u003cbr\u003e\n\nMeanwhile, **broadcast** variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks. They can be used, for example, to give every node a copy of a large input dataset in an efficient manner. Spark also attempts to distribute broadcast variables using efficient broadcast algorithms to reduce communication cost.\n\u003cbr\u003e\n\nIf we were dealing with large input that was not broadcast, it would have to be serialized and shipped to each mapper task on each node for each task. This could become a very resource intensive process and using broadcast will save us lots of bandwidth. In KMeans for example, if we have 900 gigs of data (assuming 1 gig chunks) then we ship each mapper and centroids data to each executor 900 times. However, if we have 5 worker nodes then we we broadcast centroids we only ship the data 5 times.\n\u003cbr\u003e\n\nIn the linear regression example below (from the lecture), the weight vectors are broadcast for every iteration. Therefore, every worker node will have a copy of the weight vectors rather than having to send it for each executor task.",
+      "dateUpdated": "Apr 4, 2016 11:19:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826356394_726584964",
+      "id": "20160404-231916_2071651734",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eHW 11.0 - Broadcast versus Caching in Spark\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eWhat is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eCaching\u003c/strong\u003e (or persisting) is a key operation in Spark. When you cache an RDD, each node stores any partitions of it that it computes in memory and reuses them in other actions on that dataset (or datasets derived from it). This allows future actions to be much faster (often by more than 10x). Caching is a key tool for iterative algorithms and fast interactive use.\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eMeanwhile, \u003cstrong\u003ebroadcast\u003c/strong\u003e variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks. They can be used, for example, to give every node a copy of a large input dataset in an efficient manner. Spark also attempts to distribute broadcast variables using efficient broadcast algorithms to reduce communication cost.\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eIf we were dealing with large input that was not broadcast, it would have to be serialized and shipped to each mapper task on each node for each task. This could become a very resource intensive process and using broadcast will save us lots of bandwidth. In KMeans for example, if we have 900 gigs of data (assuming 1 gig chunks) then we ship each mapper and centroids data to each executor 900 times. However, if we have 5 worker nodes then we we broadcast centroids we only ship the data 5 times.\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eIn the linear regression example below (from the lecture), the weight vectors are broadcast for every iteration. Therefore, every worker node will have a copy of the weight vectors rather than having to send it for each executor task.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 4, 2016 11:19:16 PM",
+      "dateStarted": "Apr 4, 2016 11:19:35 PM",
+      "dateFinished": "Apr 4, 2016 11:19:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport numpy as np\n\ndef linearRegressionGD(data, wInitial\u003dNone, learningRate\u003d0.05, iterations\u003d50):\n    featureLen \u003d len(data.take(1)[0])-1\n    n \u003d data.count()\n    if wInitial is None:  #start learning from a random vector\n        w \u003d np.random.normal(size\u003dfeatureLen) # w should be broadcasted if it is large\n    else:                 #start from provided vector\n        w \u003d wInitial\n    for i in range(iterations):\n        wBroadcast \u003d sc.broadcast(w) #make available in memory as read-only to the executors (for mappers and reducers)\n        gradient \u003d data.map(lambda d: -2 * (d[0] - np.dot(wBroadcast.value, d[1:])) * np.array(d[1:])) \\\n                    .reduce(lambda a, b: a + b)\n        w \u003d w - learningRate * gradient/n\n    return w\n    ",
+      "dateUpdated": "Apr 4, 2016 11:20:04 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826364815_1978573210",
+      "id": "20160404-231924_885662749",
+      "dateCreated": "Apr 4, 2016 11:19:24 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nAn example of the .cache() function can be seen below. Our data would be read from a file, parsed and then cached into memory. If we were to apply actions or transformations (i.e. a map or filter operation) on this data, it would be available in memory rather than having to read it from disk.",
+      "dateUpdated": "Apr 4, 2016 11:20:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826410246_1613723983",
+      "id": "20160404-232010_638313399",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eAn example of the .cache() function can be seen below. Our data would be read from a file, parsed and then cached into memory. If we were to apply actions or transformations (i.e. a map or filter operation) on this data, it would be available in memory rather than having to read it from disk.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 4, 2016 11:20:10 PM",
+      "dateStarted": "Apr 4, 2016 11:20:13 PM",
+      "dateFinished": "Apr 4, 2016 11:20:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndata \u003d sc.textFile(\u0027data.csv\u0027).map(lambda line: [float(v) for v in line.split(\u0027,\u0027)]+[1.0]).cache() #plus bias term\n# data [[-1.2062354302179288, 0.390508031418598, 1.0],\n#       [13.573772421743222, 1.7215149309793558, 1.0],\n#       [5.508180948046128, 0.822107008573151, 1.0], .......]\nlinearRegressionGD(data)",
+      "dateUpdated": "Apr 4, 2016 11:20:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826416452_-342739498",
+      "id": "20160404-232016_694712392",
+      "dateCreated": "Apr 4, 2016 11:20:16 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n*Review [this Spark-notebook-based implementation of KMeans](http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb) and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:*\n\u003cbr\u003e\n\nIn the KMeans code, centroids are shipped to each mapper as part of the call to the nearest\\_centroids() function. If we have very large centroids then this can be a very resource intensive process. Currently, centroids is a global variable that is accessed through the nearest\\_centroids() function, which is called in the mapper for each iteration of our KMeans process. Given that centroids do not change during an iteration, we will want to broadcast these for each iteration so they can be made use of inside the nearest\\_centroids() function. As such, there are two changes to make to the code for this KMeans implementation. These changes will be similar in nature to those shown in the above code for linear regression. Firstly, we will broadcast the centroids at the start of each iteration. Secondly, we will make use of the broadcast values inside the nearest\\_centroids() function (called by the mapper). The changes would thus look as follows:",
+      "dateUpdated": "Apr 4, 2016 11:21:53 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -51,7 +184,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": true
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -62,12 +195,39 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch2\u003eHW 11.0 - Broadcast versus Caching in Spark\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eWhat is the difference between broadcasting and caching data in Spark? Give an example (in the context of machine learning) of each mechanism (at a highlevel). Feel free to cut and paste code examples from the lectures to support your answer.\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\n\u003cbr  /\u003e\u003cem\u003eReview \u003ca href\u003d\"http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb\"\u003ethis Spark-notebook-based implementation of KMeans\u003c/a\u003e and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n"
+        "msg": "\u003cp\u003e\u003cem\u003eReview \u003ca href\u003d\"http://nbviewer.ipython.org/urls/dl.dropbox.com/s/41q9lgyqhy8ed5g/EM-Kmeans.ipynb\"\u003ethis Spark-notebook-based implementation of KMeans\u003c/a\u003e and use the broadcast pattern to make this implementation more efficient. Please describe your changes in English first, implement, comment your code and highlight your changes:\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eIn the KMeans code, centroids are shipped to each mapper as part of the call to the nearest_centroids() function. If we have very large centroids then this can be a very resource intensive process. Currently, centroids is a global variable that is accessed through the nearest_centroids() function, which is called in the mapper for each iteration of our KMeans process. Given that centroids do not change during an iteration, we will want to broadcast these for each iteration so they can be made use of inside the nearest_centroids() function. As such, there are two changes to make to the code for this KMeans implementation. These changes will be similar in nature to those shown in the above code for linear regression. Firstly, we will broadcast the centroids at the start of each iteration. Secondly, we will make use of the broadcast values inside the nearest_centroids() function (called by the mapper). The changes would thus look as follows:\u003c/p\u003e\n"
       },
       "dateCreated": "Apr 2, 2016 1:18:20 PM",
-      "dateStarted": "Apr 2, 2016 2:48:00 PM",
-      "dateFinished": "Apr 2, 2016 2:48:00 PM",
+      "dateStarted": "Apr 4, 2016 11:21:53 PM",
+      "dateFinished": "Apr 4, 2016 11:21:54 PM",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport numpy as np\nimport pylab \nimport json\nsize1 \u003d size2 \u003d size3 \u003d 1000\nsamples1 \u003d np.random.multivariate_normal([4, 0], [[1, 0],[0, 1]], size1)\ndata \u003d samples1\nsamples2 \u003d np.random.multivariate_normal([6, 6], [[1, 0],[0, 1]], size2)\ndata \u003d np.append(data,samples2, axis\u003d0)\nsamples3 \u003d np.random.multivariate_normal([0, 4], [[1, 0],[0, 1]], size3)\ndata \u003d np.append(data,samples3, axis\u003d0)\n# Randomlize data\ndata \u003d data[np.random.permutation(size1+size2+size3),]\nnp.savetxt(\u0027data.csv\u0027,data,delimiter \u003d \u0027,\u0027)\n\n#Calculate which class each data point belongs to\ndef nearest_centroid(line):\n    x \u003d np.array([float(f) for f in line.split(\u0027,\u0027)])\n    closest_centroid_idx \u003d np.sum((x - centroidsBroadcast.value)**2, axis\u003d1).argmin() # THIS HAS BEEN UPDATED TO USE BROADCAST VALUE\n    return (closest_centroid_idx,(x,1))\n\n#plot centroids and data points for each iteration\ndef plot_iteration(means):\n    pylab.plot(samples1[:, 0], samples1[:, 1], \u0027.\u0027, color \u003d \u0027blue\u0027)\n    pylab.plot(samples2[:, 0], samples2[:, 1], \u0027.\u0027, color \u003d \u0027blue\u0027)\n    pylab.plot(samples3[:, 0], samples3[:, 1],\u0027.\u0027, color \u003d \u0027blue\u0027)\n    pylab.plot(means[0][0], means[0][1],\u0027*\u0027,markersize \u003d10,color \u003d \u0027red\u0027)\n    pylab.plot(means[1][0], means[1][1],\u0027*\u0027,markersize \u003d10,color \u003d \u0027red\u0027)\n    pylab.plot(means[2][0], means[2][1],\u0027*\u0027,markersize \u003d10,color \u003d \u0027red\u0027)\n    pylab.show()\n    \nK \u003d 3\n# Initialization: initialization of parameter is fixed to show an example\ncentroids \u003d np.array([[0.0,0.0],[2.0,2.0],[0.0,7.0]])\n\n#D \u003d sc.textFile(\"./data.csv\").cache()\nD \u003d sc.parallelize(data).cache()\niter_num \u003d 0\nfor i in range(10):\n    centroidsBroadcast \u003d sc.broadcast(centroids) # HERE WE BROADCAST THE CENTROIDS IN ORDER TO BE ABLE TO USE THEM ABOVE\n    res \u003d D.map(nearest_centroid).reduceByKey(lambda x,y : (x[0]+y[0],x[1]+y[1])).collect()\n    #res [(0, (array([  2.66546663e+00,   3.94844436e+03]), 1001)  ), \n    #     (2, (array([ 6023.84995923,  5975.48511018]), 1000)), \n    #     (1, (array([ 3986.85984761,    15.93153464]), 999))]\n    # res[1][1][1] returns 1000 here\n    res \u003d sorted(res,key \u003d lambda x : x[0])  #sort based on clusted ID\n    centroids_new \u003d np.array([x[1][0]/x[1][1] for x in res])  #divide by cluster size\n    if np.sum(np.absolute(centroids_new-centroids))\u003c0.01:\n        break\n    print \"Iteration\" + str(iter_num)\n    iter_num \u003d iter_num + 1 \n    centroids \u003d centroids_new\n    print centroids\n    plot_iteration(centroids)\nprint \"Final Results:\"\nprint centroids",
+      "dateUpdated": "Apr 4, 2016 11:21:44 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459826492176_-1375703807",
+      "id": "20160404-232132_2025558713",
+      "dateCreated": "Apr 4, 2016 11:21:32 PM",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -106,8 +266,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n##HW11.2 Gradient descent\n*In the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?*\n\u003cbr\u003e\n\n*Describe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)*\n\u003cbr\u003e",
-      "dateUpdated": "Apr 2, 2016 3:53:51 PM",
+      "text": "%md\n##HW11.2 Gradient descent\n*In the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?*\n\u003cbr\u003e\n\nA penalized loss function is achieved by adding a regularization term to to the loss in order to prevent overfitting. Some of the most common methods for achieving this in the context of logistic regression are:\n\n\u003cbr\u003e\n\n1. **L1 regularization.** The regularization term applied here is |w| \n2. **L2 regularization.** The regularization term applied here is w^2\n3. **Elastic-net regularization.** This is a combination of L1 and L2 regularization and the term applied is (a/2)w^2 + (1-a)|w|\n\nAll three of these regularization terms are supported in Spark MLlib as seen in the online documentation here: [http://spark.apache.org/docs/latest/mllib-linear-methods.html#regularizers](http://spark.apache.org/docs/latest/mllib-linear-methods.html#regularizers)\n\u003cbr\u003e\n\n*Describe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)*\n\u003cbr\u003e\nAs seen in the synchronous slides, the L1 norm is a Manhattan distance and the L2 norm is a Euclidean distance. When comparing L1 and L2 regularization in the context of penalty terms, L1 regularization can be visualized as concentric diamonds from the center point whereas L2 regularization can be visualized as concentric circles from the center point. Considering this in more probabilistic terms, we can view L1 as setting a Laplacean prior on the regression coefficients and picking a MAP hypothesis. Similarly, L2 can be viewed as setting a Gaussian prior. Here, L1 drives **w** to zero more efficiently as can be seen in this graph: ![Laplace vs Gaussian](http://i.imgur.com/eFxwvX5.png).This has the practical effect of driving less-important feature weights to zero more rapidly than in L2 regularization",
+      "dateUpdated": "Apr 4, 2016 11:31:27 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -121,7 +281,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": true
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -132,11 +292,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch2\u003eHW11.2 Gradient descent\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eIn the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eDescribe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n"
+        "msg": "\u003ch2\u003eHW11.2 Gradient descent\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eIn the context of logistic regression describe and define three flavors of penalized loss functions.  Are these all supported in Spark MLLib (include online references to support your answers)?\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003eA penalized loss function is achieved by adding a regularization term to to the loss in order to prevent overfitting. Some of the most common methods for achieving this in the context of logistic regression are:\u003c/p\u003e\n\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003eL1 regularization.\u003c/strong\u003e The regularization term applied here is |w|\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eL2 regularization.\u003c/strong\u003e The regularization term applied here is w^2\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eElastic-net regularization.\u003c/strong\u003e This is a combination of L1 and L2 regularization and the term applied is (a/2)w^2 + (1-a)|w|\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eAll three of these regularization terms are supported in Spark MLlib as seen in the online documentation here: \u003ca href\u003d\"http://spark.apache.org/docs/latest/mllib-linear-methods.html#regularizers\"\u003ehttp://spark.apache.org/docs/latest/mllib-linear-methods.html#regularizers\u003c/a\u003e\n\u003cbr  /\u003e\u003cbr\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eDescribe probabilitic interpretations of the L1 and L2 priors for penalized logistic regression (HINT: see synchronous slides for week 11 for details)\u003c/em\u003e\n\u003cbr  /\u003e\u003cbr\u003e\n\u003cbr  /\u003eAs seen in the synchronous slides, the L1 norm is a Manhattan distance and the L2 norm is a Euclidean distance. When comparing L1 and L2 regularization in the context of penalty terms, L1 regularization can be visualized as concentric diamonds from the center point whereas L2 regularization can be visualized as concentric circles from the center point. Considering this in more probabilistic terms, we can view L1 as setting a Laplacean prior on the regression coefficients and picking a MAP hypothesis. Similarly, L2 can be viewed as setting a Gaussian prior. Here, L1 drives \u003cstrong\u003ew\u003c/strong\u003e to zero more efficiently as can be seen in this graph: \u003cimg src\u003d\"http://i.imgur.com/eFxwvX5.png\" alt\u003d\"Laplace vs Gaussian\" /\u003e.This has the practical effect of driving less-important feature weights to zero more rapidly than in L2 regularization\u003c/p\u003e\n"
       },
       "dateCreated": "Apr 2, 2016 2:48:04 PM",
-      "dateStarted": "Apr 2, 2016 2:49:56 PM",
-      "dateFinished": "Apr 2, 2016 2:49:56 PM",
+      "dateStarted": "Apr 4, 2016 11:31:27 PM",
+      "dateFinished": "Apr 4, 2016 11:31:28 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
