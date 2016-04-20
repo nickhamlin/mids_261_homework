@@ -1,0 +1,14 @@
+# IPython Notebook
+.ipynb_checkpoints
+metastore_db
+
+MIDS-W261-2015-HWK-Week13-Hamlin-Thomas-Baek-Danish-Copy1.ipynb
+*.py
+*.pyc
+*.txt
+*.csv
+*.data
+*.log
+mrjob.conf
+*part-*
+*_SUCCESS
