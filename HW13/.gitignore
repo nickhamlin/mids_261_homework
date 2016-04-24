@@ -8,7 +8,9 @@ MIDS-W261-2015-HWK-Week13-Hamlin-Thomas-Baek-Danish-Copy1.ipynb
 *.txt
 *.csv
 *.data
+*.pem
 *.log
+*.pkl
 mrjob.conf
 *part-*
 *_SUCCESS
